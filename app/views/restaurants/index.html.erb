@@ -1,0 +1,19 @@
+<h1>Restaurants#index</h1>
+<p>Find me in app/views/restaurants/index.html.erb</p>
+
+
+<div class="box">
+  <div id="create">
+    <%= link_to "Create new restaurant", new_restaurant_path, id: "new-restaurant" %>
+  </div>
+</div>
+
+<ul style="list-style-type:none;">
+  <% @restaurant.each do |restaurant| %>
+    <li><%= link_to "View", restaurant_path(restaurant) %>
+        <%= link_to "Edit", edit_restaurant_path(restaurant) %>
+        <%= link_to "Delete", restaurant_path(restaurant), method: :delete, data: { confirm: "Are you sure?" } %>
+        - <%= restaurant.name %> - <%= restaurant.address %> - <%= restaurant.phone_number %> - <%= restaurant.category %>
+        </li>
+  <% end %>
+</ul>

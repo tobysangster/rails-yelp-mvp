@@ -1,0 +1,13 @@
+<h1>Restaurants#new</h1>
+<p>Find me in app/views/restaurants/new.asdasddadhtml.erb</p>
+
+<h1>Create your restaurant</h1>
+
+
+<%= simple_form_for (@restaurant) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.input :category %>
+  <%= f.submit class: 'btn btn-primary'%>
+<% end %>
